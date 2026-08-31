@@ -1,33 +1,42 @@
-# CS Studios — 10 Spawn Bots
+# CS Studios — Spawn Bots V3
 
-Sistema de bots Mineflayer para pruebas/ambientación del spawn.
+Bots Mineflayer para pruebas/ambientación de un servidor Minecraft.
 
-## Zona
+## Área
 X: 0 → 200
 Z: 0 → 150
 
-## Incluye
-- 10 bots predeterminados: CS_Bot_01 ... CS_Bot_10
-- Entrada escalonada: 9 segundos entre bots
-- Movimiento aleatorio dentro de X/Z
-- Pausas aleatorias
-- Mirar alrededor
-- Saltos ocasionales
-- Chat aleatorio con intervalos de 25–70 segundos
-- Respuestas ocasionales a mensajes relacionados
-- Reconexión automática
+## V3
+- Corre/esprinta durante los recorridos.
+- Salta ocasionalmente.
+- Cambia de destino.
+- Anti-stuck.
+- Mira a jugadores cercanos.
+- Se acerca ocasionalmente a jugadores reales.
+- Saluda y responde de forma ocasional.
+- Hace sneak/agacharse como saludo.
+- Hace animación de brazo.
+- Tiene 5 tipos de personalidad para que no actúen todos igual.
+- Chat con frases variadas y tiempos diferentes.
+- Visitas a crates y tradeos mediante coordenadas configurables.
+- Reconexión automática.
+
+## Coordenadas de crates y tradeos
+No se inventan coordenadas. Edita `config.js` y coloca:
+
+points: {
+  crates: { x: 0, y: 0, z: 0 },
+  trades: { x: 0, y: 0, z: 0 }
+}
+
+Sustituye esos valores por las coordenadas reales de las dos zonas.
 
 ## GitHub Secrets
-Crea en Settings → Secrets and variables → Actions:
+SERVER_HOST
+SERVER_PORT
+MC_VERSION
 
-SERVER_HOST = IP/dominio
-SERVER_PORT = puerto
-MC_VERSION = versión, por ejemplo 1.21.8 (opcional si Mineflayer la detecta)
+## Ejecutar
+Actions → CS Studios - 10 Spawn Bots V3 → Run workflow → 10.
 
-## Uso
-Actions → CS Studios - 10 Spawn Bots → Run workflow.
-El valor por defecto es 10; puedes bajarlo entre 1 y 10.
-
-## Nota
-GitHub Actions es temporal y no sustituye un VPS para ejecución 24/7.
-Usa los bots para pruebas o ambientación permitida por la administración del servidor.
+Nota: GitHub Actions es temporal y no está diseñado como servicio 24/7.

@@ -1,6 +1,6 @@
 {
   "name": "cs-spawn-bots",
-  "version": "1.1.0",
+  "version": "3.0.0",
   "private": true,
   "dependencies": {
     "mineflayer": "^4.31.0",
