@@ -6,7 +6,7 @@ on:
       bot_count:
         description: "Cantidad de bots (1-10)"
         required: true
-        default: "10"
+        default: "3"
 
 jobs:
   spawn-bots:
