@@ -1,42 +1,43 @@
-# CS Studios — Spawn Bots V3
+# CS Studios — 10 Spawn Bots V4
 
-Bots Mineflayer para pruebas/ambientación de un servidor Minecraft.
+Versión mejorada para ambientación/pruebas.
 
-## Área
-X: 0 → 200
-Z: 0 → 150
+Zona general:
+X 0 → 200
+Z 0 → 150
 
-## V3
-- Corre/esprinta durante los recorridos.
-- Salta ocasionalmente.
-- Cambia de destino.
+Puntos configurados desde las capturas:
+- Crates: X 1500, Y 46, Z 1494
+- Tradeos: X 1544, Y 47, Z 1484
+
+IMPORTANTE:
+Las dos posiciones corresponden a las dos capturas recibidas. Si intercambiaste
+qué captura era Crates y cuál Tradeos, cambia las dos entradas de config.js.
+
+Mejoras:
+- 10 bots.
+- Corren/esprintan.
+- Saltan.
+- Cambian de destino.
 - Anti-stuck.
-- Mira a jugadores cercanos.
-- Se acerca ocasionalmente a jugadores reales.
-- Saluda y responde de forma ocasional.
-- Hace sneak/agacharse como saludo.
-- Hace animación de brazo.
-- Tiene 5 tipos de personalidad para que no actúen todos igual.
-- Chat con frases variadas y tiempos diferentes.
-- Visitas a crates y tradeos mediante coordenadas configurables.
+- Miran a jugadores cercanos.
+- Se acercan a jugadores reales ocasionalmente.
+- Saludan.
+- Sneak/agacharse como gesto.
+- Animación de brazo.
+- Personalidades distintas.
+- Chat variado.
+- Respuestas ocasionales.
+- Visitan Crates y Tradeos.
+- Se quedan unos segundos en cada zona.
 - Reconexión automática.
 
-## Coordenadas de crates y tradeos
-No se inventan coordenadas. Edita `config.js` y coloca:
-
-points: {
-  crates: { x: 0, y: 0, z: 0 },
-  trades: { x: 0, y: 0, z: 0 }
-}
-
-Sustituye esos valores por las coordenadas reales de las dos zonas.
-
-## GitHub Secrets
+GitHub Secrets:
 SERVER_HOST
 SERVER_PORT
 MC_VERSION
 
-## Ejecutar
-Actions → CS Studios - 10 Spawn Bots V3 → Run workflow → 10.
+Workflow:
+Actions → CS Studios - 10 Spawn Bots V4 → Run workflow → 10.
 
-Nota: GitHub Actions es temporal y no está diseñado como servicio 24/7.
+GitHub Actions es temporal; no es un servicio 24/7.
