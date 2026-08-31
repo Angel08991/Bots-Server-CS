@@ -1,0 +1,36 @@
+name: CS Studios - 10 Spawn Bots
+
+on:
+  workflow_dispatch:
+    inputs:
+      bot_count:
+        description: "Cantidad de bots (1-10)"
+        required: true
+        default: "10"
+
+jobs:
+  spawn-bots:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+
+    env:
+      SERVER_HOST: ${{ secrets.SERVER_HOST }}
+      SERVER_PORT: ${{ secrets.SERVER_PORT }}
+      MC_VERSION: ${{ secrets.MC_VERSION }}
+      BOT_COUNT: ${{ inputs.bot_count }}
+
+    steps:
+      - name: Descargar proyecto
+        uses: actions/checkout@v4
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Iniciar bots
+        run: node bot.js
